@@ -1,0 +1,32 @@
+.serviceContent .icon{
+    background-color: #F91944;
+    color:white;
+    border-radius: 50%;
+    padding:13px 15px;
+    font-size: 17px;
+    
+}
+.serviceContent h2{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 4px;
+}
+.serviceContent p{
+    color: #838383;
+    font-size: 16px;
+}
+.serviceContent button{
+    background: transparent;
+    border:none;
+    color:rgb(20, 107, 247);
+    font-weight: 700;
+    font-size: 15px;
+}
+ .btnIcon{
+    background: rgb(16, 197, 16);
+    border-radius:50%;
+    padding:5px 8px;
+    color:white;
+    margin-left:10px;
+}

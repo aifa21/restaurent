@@ -1,0 +1,11 @@
+.service-top h2{
+    font-weight: 500;
+    font-size:35px;
+    margin-top:10px;
+}
+.service-top p{
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    color: #838383;
+}

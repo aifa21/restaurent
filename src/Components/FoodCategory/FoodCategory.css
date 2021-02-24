@@ -1,0 +1,20 @@
+.food-container{
+    
+    margin:15px 10px;
+    padding :15px 15px;
+    box-shadow: 4px 4px 15px rgb(230, 227, 227);
+    text-align:center;
+    border-radius: 10px;
+
+   
+}
+.food-container img{
+    width:200px;
+    height:220px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+   
+}
+.food-container:hover{
+    
+}
