@@ -40,8 +40,10 @@
 }
 .showBtnDeactive{
    margin: 10px 15px;
-  
+   padding:5px 10px;
    border:none;
+   border-radius: 5px;
+   box-shadow: 5px 5px 4px 4px rgb(245, 223, 215);
    background: transparent;
    color:black;
    font-size: 17px;

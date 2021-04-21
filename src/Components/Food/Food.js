@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../App';
 import { getDatabaseCart } from '../../utilities/databaseManager';
 import DinnerCategory from '../DinnerCategory/DinnerCategory';
 import fakeData from '../FakeData';
@@ -7,6 +8,7 @@ import FoodCategory from '../FoodCategory/FoodCategory';
 import LaunchCategory from '../LaunchCategory/LaunchCategory';
 import './Food.css';
 const Food = () => {
+    const [loggedInUser, setLoggedInUser] =useContext(UserContext);
     const [food,setFood]=useState(fakeData);
     const [breakfast,setBreakfast]=useState([]);
     const [launch,setLaunch]=useState([]);
@@ -15,6 +17,8 @@ const Food = () => {
     const [showBreakfast,setShowBreakfast]=useState(false);
     const [showLaunch,setShowLaunch]=useState(false);
     const [showDinner,setShowDinner]=useState(false);
+    
+
     
 
 // handle food products
@@ -50,14 +54,20 @@ const cartInfo=getDatabaseCart();
 const cartKeys=Object.keys(cartInfo);
 const cartCount=cartKeys.length;
 console.log(cartCount);
-
+console.log(loggedInUser);
+console.log(loggedInUser.isSignedIn);
 let checkoutBtn=' ';
-if(cartCount>0){
+if(loggedInUser.isSignedIn==true&& cartCount>0){
     checkoutBtn=<Link to='/shipment'><button className="btn-activate">Checkout Your food</button></Link>
     
 }
+else if( cartCount>0){
+    checkoutBtn=<Link to='/shipment'><button className="btn-activate">Login  to Checkout</button></Link>
+    
+}
+
 else{
-    checkoutBtn=<Link to='/shipment'><button disabled className="btn-deactivate">Checkout Your food</button></Link>
+    checkoutBtn=<button className="btn-deactivate">Create Account to Checkout Your food</button>
 }
 
 
